@@ -549,7 +549,7 @@
           const formData = new FormData();
           formData.append('image', file);
 
-          const response = await fetch('https://huyenhuyenbackend-4.onrender.com/api/images/upload', {
+          const response = await fetch('https://huyenhuyenbackend-5.onrender.com/api/images/upload', {
             method: 'POST',
             body: formData
           });
@@ -580,7 +580,7 @@
 
     async function loadPhotoGallery() {
       try {
-        const response = await fetch('https://huyenhuyenbackend-4.onrender.com/api/images');
+        const response = await fetch('https://huyenhuyenbackend-5.onrender.com/api/images');
 
         if (response.status === 401) {
           localStorage.removeItem('authToken');
@@ -615,7 +615,7 @@
       photoItem.style.animationDelay = `${index * 0.1}s`;
       
       const img = document.createElement('img');
-      img.src = 'https://huyenhuyenbackend-4.onrender.com' + imageData.url;
+      img.src = 'https://huyenhuyenbackend-5.onrender.com' + imageData.url;
       img.alt = imageData.originalName || 'Ảnh kỷ niệm';
       
       const infoOverlay = document.createElement('div');
@@ -792,7 +792,7 @@
       }
       
       try {
-        const response = await fetch(`https://huyenhuyenbackend-4.onrender.com/api/images/${filename}`, {
+        const response = await fetch(`https://huyenhuyenbackend-5.onrender.com/api/images/${filename}`, {
           method: 'DELETE'
         });
         
@@ -819,7 +819,7 @@
 
     async function updateImageInfo(filename, newName, newDesc) {
       try {
-        const response = await fetch(`https://huyenhuyenbackend-4.onrender.com/api/images/${filename}`, {
+        const response = await fetch(`https://huyenhuyenbackend-5.onrender.com/api/images/${filename}`, {
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json'
