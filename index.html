@@ -452,20 +452,11 @@
       
       // Đợi 4 giây trước khi chuyển trang
       setTimeout(() => {
-        // Hiệu ứng chuyển trang với tim
-        document.body.innerHTML = `
-          <div style="text-align:center; padding: 20px; position: relative; animation: fadeIn 1s ease;">
-            <h1 style="color:#4d3b4c; font-size: 28px; margin: 20px 0; padding: 0 15px; animation: fadeIn 1s ease, floatAnimation 3s ease-in-out infinite;">
-              yêu theeee! Anh yêu chị nhiềuuu♡
-            </h1>
-            <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
-              <img src="image/hug.png" style="width:300px; max-width: 90%; animation: fadeIn 1s ease 0.3s backwards, floatAnimation 3s ease-in-out infinite;">
-              <img src="image/HuyenNgau.jpg" style="width:300px; max-width: 90%; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); animation: fadeIn 1s ease 0.6s backwards;">
-            </div>
-          </div>
-        `;
+        // Chuyển đến trang gallery
+        window.location.href = 'gallery.html';
       }, 4000);
     });
+
   </script>
 
 </body>
