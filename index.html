@@ -450,6 +450,9 @@
       // Tụ tất cả heart về mainImage
       gatherHearts();
       
+      // Tự động đăng nhập và chuyển đến gallery
+      localStorage.setItem('authToken', 'authenticated_huyen_yeuanh123');
+      
       // Đợi 4 giây trước khi chuyển trang
       setTimeout(() => {
         // Chuyển đến trang gallery
