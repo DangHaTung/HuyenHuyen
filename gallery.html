@@ -410,13 +410,12 @@
 <body>
   <div class="header">
     <h1>📸 Ảnh kỷ niệm chúng mình ♡</h1>
-    <p class="subtitle">Nơi lưu giữ những khoảnh khắc đẹp nhất của chúng ta</p>
+    <p class="subtitle">Những khoảnh khắc đẹp nhất của Tugn và Huỳn</p>
   </div>
 
   <div class="controls">
     <button id="addPhotoBtn" class="btn">➕ Thêm ảnh yêu thương</button>
     <a href="index.html" class="btn secondary">🏠 Về trang chủ</a>
-    <button id="logoutBtn" class="btn secondary">🚪 Đăng xuất</button>
   </div>
 
   <div id="photoGallery" class="gallery">
@@ -513,7 +512,7 @@
       const username = document.getElementById('loginUsername').value;
       const password = document.getElementById('loginPassword').value;
       
-      if (username === 'huyen' && password === 'yeuanh123') {
+      if (username === 'huyeniutung' && password === 'tungiuhuyen') {
         localStorage.setItem('authToken', 'authenticated_huyen_yeuanh123');
         document.getElementById('loginOverlay').remove();
         loadPhotoGallery();
@@ -527,7 +526,6 @@
     const photoGallery = document.getElementById('photoGallery');
     const uploadModal = document.getElementById('uploadModal');
     const addPhotoBtn = document.getElementById('addPhotoBtn');
-    const logoutBtn = document.getElementById('logoutBtn');
     const closeModal = document.querySelector('.close');
     const uploadArea = document.getElementById('uploadArea');
     const fileInput = document.getElementById('fileInput');
@@ -542,13 +540,6 @@
     // Event listeners
     addPhotoBtn.addEventListener('click', () => {
       uploadModal.style.display = 'block';
-    });
-
-    logoutBtn.addEventListener('click', () => {
-      if (confirm('Bạn có chắc muốn đăng xuất không?')) {
-        localStorage.removeItem('authToken');
-        window.location.href = 'index.html';
-      }
     });
 
     closeModal.addEventListener('click', () => {
